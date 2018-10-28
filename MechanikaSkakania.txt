@@ -1,0 +1,28 @@
+#ifndef JUMP_MOVEMENT_H
+#define JUMP_MOVEMENT_H
+
+#include "Controllers/MovementController.h"
+
+class JumpMovement : public MovementController {
+	float jumpingForce = 50; //Postaæ porusza siê do góry z okreœlon¹ prdêdkoœci¹ po naciœniêciu przycisku skoku
+	float gravity = 10; 	 //Jak w prawdziwym zyciu dziala na ni¹ si³a która ca³y czas odejmuje "punkty prêdkoœci" poniewa¿ dzia³a w przewiwnym zwrocie
+	float floorLevelY = 775; //Poziom kolizji pod³o¿a
+
+	float velocityY = 0;
+	bool isJumping = false;
+
+	sf::Keyboard::Key jumpKey;
+public:
+	JumpMovement(float jumpingForce = 50, float gravity = 10, float floorLevelY = 775) :
+		jumpingForce(jumpingForce), gravity(gravity), floorLevelY(floorLevelY) {}
+
+	void SetJumpingForce(float jumpingForce);
+	void SetGravity(float gravity);
+	void SetFloorLevelY(float y);
+
+	void SetJumpKey(sf::Keyboard::Key jumpKey);
+
+	virtual void PerformMovement(Character* jumpingCharacter, sf::Time deltaTime);
+};
+
+#endif 
