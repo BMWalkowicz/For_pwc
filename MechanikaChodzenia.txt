@@ -8,7 +8,7 @@ void BasicMovement::SetMovementSpeed(float movementSpeed)
 
 void BasicMovement::SetMoveLeftKey(sf::Keyboard::Key moveLeftKey)
 {
-	this->moveLeftKey = moveLeftKey; //Sprawdzamy co nacisnπ≥ gracz
+	this->moveLeftKey = moveLeftKey; //Sprawdzamy co nacisnal gracz
 }
 
 void BasicMovement::SetMoveRightKey(sf::Keyboard::Key moveRightKey)
@@ -34,5 +34,5 @@ void BasicMovement::PerformMovement(Character * movingCharacter, sf::Time deltaT
 	else if (movingCharacter->GetCurrentState() == CharStateID::WALK)
 		movingCharacter->SetCharacterState(CharStateID::IDLE);
 
-	movingCharacter->SetPosition(position); //Wynik wysylamy do funkcji przesÛwajπcej postaÊ
+	movingCharacter->SetPosition(position); //Wynik wysylamy do funkcji przes√≥wajacej postac
 }
