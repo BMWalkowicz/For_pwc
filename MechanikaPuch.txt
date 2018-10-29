@@ -3,12 +3,12 @@
 
 void PunchFighting::SetDamage(float damage)
 {
-	this->damage = damage; //Punch ma jak¹œ wartoœæ obra¿eñ która bêdzie odjêta od ¿ycia przeciwnika przy po³¹czeniu
+	this->damage = damage; //Punch ma jakas wartosc obrazen ktora bedzie odjeta od zycia przeciwnika przy polaczeniu
 }
 
 void PunchFighting::SetHitBox(sf::FloatRect rect)
 {
-	hitBox.setSize(sf::Vector2f(rect.width, rect.height)); //Okreœlamy hitbox puncha
+	hitBox.setSize(sf::Vector2f(rect.width, rect.height)); //Okreslamy hitbox puncha
 	hitBoxPosition = sf::Vector2f(rect.left, rect.top);
 }
 
