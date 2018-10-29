@@ -1,0 +1,105 @@
+body
+{
+	background-color: #464646;
+	color: white;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1400px;
+}
+
+#logo
+{
+	background-color: #2867cc;
+
+}
+
+#imie
+{
+	float: left;
+	border-right: 4px solid black;
+	font-size: 42px;
+	font-weight: bold;
+	padding: 50px;
+
+}
+
+#Portfolio
+{
+	float: left;
+	font-size: 42px;
+	font-weight: bold;
+	padding: 50px;
+	margin-left: 400px;
+}
+
+#lista
+{
+	background-color: #282a2d;
+	width: 334px;
+	height: 750px;
+	float: left;
+	font-weight: bold;
+	font-size: 32px;
+
+}
+
+#slider
+{
+	width: 626px;
+	height: 300px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 40px;
+}
+
+#kafelki
+{
+	float: left;
+	width: 350px;
+	height: 300px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+.kaf
+{
+float: left;
+width: 130px;
+height: 130px;
+margin:10px;
+text-align: center;
+}
+
+#content
+{
+	width: 1016px;
+	float: left;
+}
+
+#maintext
+{
+	font-weight: bold;
+	font-size: 22px;
+	margin-left: 20px;
+	margin-top: 60px;
+}
+
+#footer
+{
+	width: 1400px;
+	background-color: #141516;
+	text-align: center;
+	min-height: 50px;
+}

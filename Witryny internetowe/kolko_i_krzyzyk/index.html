@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+	<script src="script.js"></script>
+
+	<title>Kolko i krzyzyk</title>
+</head>
+<body>
+<div id="container">
+	<div id="plansza">
+	<table align="center">
+		<tr>
+			<td><div class="tile" onclick="check(0)" id="tile0"></div></td>
+			<td><div class="tile" onclick="check(1)" id="tile1"></div></td>
+			<td><div class="tile" onclick="check(2)" id="tile2"></div></td>
+		</tr>
+		<tr>
+			<td><div class="tile" onclick="check(3)" id="tile3"></div></td>
+			<td><div class="tile" onclick="check(4)" id="tile4"></div></td>
+			<td><div class="tile" onclick="check(5)" id="tile5"></div></td>
+		</tr>
+		<tr>
+			<td><div class="tile" onclick="check(6)" id="tile6"></div></td>
+			<td><div class="tile" onclick="check(7)" id="tile7"></div></td>
+			<td><div class="tile" onclick="check(8)" id="tile8"></div></td>
+		</tr>
+	</table>
+	<div id="commentary"><h1>Witam w grze w kółko i krzyżyk, kółko zaczyna!</h1></div>
+	</div>
+	<div id="punkty">
+		<div id="svgAttributes"> <svg width="128" height="128" viewBox="0 0 128 128">
+  		<polygon points="64 69.32230818190814 8.574 99.9540223597097 62.81527873049758 67.26987944861048 64 3.954022359709694 65.18472126950242 67.26987944861048 119.426 99.9540223597097 " fill="currentColor"></polygon>
+		</svg> </div>
+
+		<div class="pole"><h1>Gracz-Kółko</h1></div><div class="pole" id="pkt1"><h1>0</h1></div>
+		<div style="clear: both;"></div>
+		<div class="pole"><h1>Gracz-Krzyżyk</h1></div><div class="pole" id="pkt2"><h1>0</h1></div>
+		<div style="clear: both;"></div>
+		<div class="pole"><h1>Remis</h1></div><div class="pole" id="pkt3"><h1>0</h1></div>
+		<div style="clear: both;"></div>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+</body>
+</html>
