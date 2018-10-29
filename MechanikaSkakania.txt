@@ -4,9 +4,9 @@
 #include "Controllers/MovementController.h"
 
 class JumpMovement : public MovementController {
-	float jumpingForce = 50; //Postaæ porusza siê do góry z okreœlon¹ prdêdkoœci¹ po naciœniêciu przycisku skoku
-	float gravity = 10; 	 //Jak w prawdziwym zyciu dziala na ni¹ si³a która ca³y czas odejmuje "punkty prêdkoœci" poniewa¿ dzia³a w przewiwnym zwrocie
-	float floorLevelY = 775; //Poziom kolizji pod³o¿a
+	float jumpingForce = 50; //Postac porusza sie do gory z okreslona prdedkoscia po nacisniÃªciu przycisku skoku
+	float gravity = 10; 	 //Jak w prawdziwym zyciu dziala na nia sila ktÃ³ra caly czas odejmuje "punkty prÃªdkosci" poniewaz dziala w przewiwnym zwrocie
+	float floorLevelY = 775; //Poziom kolizji podloza
 
 	float velocityY = 0;
 	bool isJumping = false;
