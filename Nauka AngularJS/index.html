@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script src="script.js"></script>
+	<title>Babysteps</title>
+<style>
+table
+{
+	width: 400px;
+	text-align: left;
+	border: 2px solid black;
+	padding: 10px;
+}
+</style>
+</head>
+<body style="background-color: #3a3b3c; color: white;">
+
+
+<div ng-controller="FCon">
+	
+	<span>Dzialania matematyczne:</span><br>
+	<input type="text" ng-model="wrt1" />
+	<input type="text" ng-model="wrt2" />
+
+	<button ng-click="refresh()">Przycisk</button>
+	<br>
+	{{licz}}
+
+<p>pierwsza podana wartosc to: {{wrt1}}</p>
+
+<div ng-include="'ol.html'"></div>
+
+<!-- <label>
+	<input type="checkbox" ng-model="pokazListe">
+	Zmien rodzaj listy
+</label>
+<ng-include src="zmienListe()"></ng-include> -->
+
+<ul>
+	<li ng-repeat="llr in food">
+		{{llr.owoc}}
+	</li>
+</ul>
+
+<input type="text" ng-model="liczba" />
+
+<div ng-switch="liczba">
+	<p ng-switch-when="10">Liczba jest rowna 10</p>
+	<p ng-switch-when="5">Liczba jest rowna 5</p>
+	<p ng-switch-when="1">Liczba jest rowna 1</p>
+	<p ng-switch-default="10">Wpisz liczbe 1, 5 lub 10</p>
+</div>
+
+<input ng-blur="blur = blur + 1"
+	ng-click="click = click + 1"
+	ng-dblclick="dblclick = dblclick + 1"
+	ng-copy="copy = copy + 1"
+	ng-paste="paste = paste + 1"
+	ng-cut="cut = cut + 1"
+	ng-focus="focus = focus + 1"
+	ng-model="confirmed"
+	ng-change="change = change + 1"
+	ng-mouseenter="mouseenter = mouseenter + 1"
+	ng-mouseleave="mouseleave = mouseleave + 1" /> <br>
+
+Klikniecie po za okienkiem: {{blur}}<br>
+Klikniecie w okienku: {{click}}<br>
+Podwojne klikniecie w okienku: {{dblclick}}<br>
+Klikniecie skopiowanie czcegos w okienku: {{copy}}<br>
+Klikniecie wklejenie czegos w okienku: {{paste}}<br>
+Klikniecie wyciecie czegos w okienku: {{cut}}<br>
+Skupienie na okienku kursora: {{focus}}<br>
+Ilosc zmian w okienku: {{change}}<br>
+Trzymanie kursora nad okienkiem: {{mouseenter}}<br>
+Zjechanie kursorem z okienka: {{mouseleave}}<br>
+
+<p>
+	<button ng-disabled="blokadaPrzycisku">Jakis przycisk do zablokowania</button>
+</p>
+
+<p>
+	<input type="checkbox" ng-model="blokadaPrzycisku">Blokuj</button>
+	<p ng-hide="!blokadaPrzycisku">Zablokowany!</p>
+	<p ng-hide="blokadaPrzycisku">Zablokujmy ten przycisk!</p>
+
+	Lista obejzanych filmow <br>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Tytul filmu</th>
+				<th>Obejzany</th>
+			</tr>
+		</thead>
+			<tr ng-repeat="tytul in filmy">
+				<td>{{tytul.film}}</td>
+				<td><input type="checkbox" ng-model="film.Obejzany" /></td>
+			</tr>
+	</table>
+	<br>
+	<label>Nowy film:
+		<input type="text" ng-model="nowyFilm" />
+	</label>
+	<button ng-click="dodajFilm(nowyFilm)">Dodaj</button>
+
+	{{blad}}
+
+<br><br>Nastepny upload postepow wrzuce w poniedzialek w okolicach 13-14
+
+</div>
+
+</body>
+</html>
