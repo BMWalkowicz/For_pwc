@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+	<script src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+</head>
+<body>
+
+<div ng-controller="mainCtrl">
+	
+	<label>Znajdz pracownika w swojej firmie (szukaj po dziale): </label><br>
+	<input type="text" ng-model="dzial" /><br><br>
+	<button ng-click="ZnajdzPracownikow()">Szukaj</button><br>
+
+	{{InfoPracownika}}
+
+</div>
+
+<div ng-controller="mainCtrl">
+	
+<h4>Dodaj pracownika: </h4><br>
+<label>Imie pracownika:</label><br>
+<input type="text" ng-model="Imie" /><br>
+<label>Nazwisko pracownika:</label><br>
+<input type="text" ng-model="Nazwisko" /><br>
+<label>Dzial:</label><br>
+<input type="text" ng-model="dzial" />
+
+<button ng-click="dodajPracownika(Imie, Nazwisko, dzial)">Dodaj</button>
+</div>
+
+
+<!-- Jeszcze dzisiaj postaram sie wrczucic kolejny projekt gdzie przedstawie dziedziczenie controllerow. Jezeli nie dzis to jutro do 9 rano-->
+
+</body>
+</html>
