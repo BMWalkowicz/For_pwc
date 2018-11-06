@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="app" ng-cloak>
+  <head>
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="mainCtrl as parent">
+
+    <p>Zyje? : {{parent.postac}}</p>
+    <p>Chodzi? : {{parent.chod}}</p>
+      <button ng-click=parent.getPlayerInfo()>Player data</button><br>
+    </div>
+ 
+    <div ng-controller="warriorCtrl as warrior">
+      <p>Zyje? : {{warrior.child.postac}}</p>
+      <p>Chodzi? : {{warrior.child.chod}}</p>
+
+    <button ng-click=warrior.child.warriorInfo()>Wojownik info</button><br><br>
+    </div>
+
+    <div ng-controller="healerCtrl as healer">
+      <p>Zyje? : {{healer.child.postac}}</p>
+      <p>Chodzi? : {{healer.child.chod}}</p>
+
+    <button ng-click=healer.child.healerInfo()>Wojownik info</button><br><br>
+    </div>
+
+  </body>
+</html>
